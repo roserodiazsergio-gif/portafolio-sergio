@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sergio Rosero Díaz · Portafolio 2026</title>
+<meta name="description" content="Portafolio 2026 de Sergio: diseñador visual y creador audiovisual. Diseño gráfico, animación 2D, diseño de personajes, niveles de videojuegos y retoque fotográfico.">
+<meta name="theme-color" content="#D9401C">
+<meta property="og:title" content="Sergio Rosero Díaz · Portafolio 2026">
+<meta property="og:description" content="Diseño gráfico · Animación 2D · Contenido digital">
+<meta property="og:image" content="img/portada-fondo.webp">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --rojo:#D9401C;
+    --naranja:#FF5A2A;
+    --crema:#FAFAF7;
+    --crema-2:#F1EEE6;
+    --tinta:#0B0B0B;
+    --dorado:#E0A91F;
+    --marco:#B9463C;
+    --gutter:clamp(16px,4vw,48px);
+    --titulo:'Poppins','Montserrat',system-ui,sans-serif;
+    --texto:'Barlow Semi Condensed','Arial Narrow',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:64px}
+  body{margin:0;background:var(--crema);color:var(--tinta);font-family:var(--texto);font-size:clamp(1.05rem,1.1vw + .8rem,1.3rem);line-height:1.5}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+
+  /* Navegación */
+  .nav{position:sticky;top:0;z-index:20;background:rgba(250,250,247,.94);backdrop-filter:blur(8px);border-bottom:3px solid var(--tinta)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1200px;margin:0 auto;padding:10px var(--gutter)}
+  .marca{font-family:var(--titulo);font-weight:800;text-decoration:none;letter-spacing:.02em;white-space:nowrap}
+  .marca span{color:var(--rojo)}
+  .menu{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .menu::-webkit-scrollbar{display:none}
+  .menu a{font-family:var(--titulo);font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;padding:8px 12px;border-radius:99px;white-space:nowrap}
+  .menu a:hover,.menu a:focus-visible{background:var(--rojo);color:#fff;outline:none}
+  .menu a.cta{background:var(--tinta);color:var(--crema)}
+
+  /* Portada */
+  .portada{position:relative;background:var(--crema) url(img/portada-fondo.webp) center/cover no-repeat;min-height:min(86vh,820px);display:grid;place-items:center;text-align:center;padding:clamp(80px,12vw,150px) var(--gutter)}
+  .portada-in{max-width:760px}
+  .saludo{font-family:var(--titulo);font-weight:600;font-size:clamp(1rem,2vw,1.4rem);margin:0 0 8px}
+  .portada h1{font-family:var(--titulo);font-weight:800;font-size:clamp(2.6rem,10.5vw,8.2rem);line-height:.95;margin:0;letter-spacing:-.01em}
+  .pastilla{display:inline-block;background:var(--rojo);color:#fff;font-family:var(--titulo);font-weight:800;font-size:clamp(.9rem,1.6vw,1.25rem);padding:.35em 1.1em;border-radius:99px;margin:clamp(14px,3vw,34px) 0 14px}
+  .rol{font-family:var(--titulo);font-weight:800;font-size:clamp(1.15rem,2.6vw,2rem);line-height:1.15;margin:8px 0 6px}
+  .servicios{margin:0;font-weight:600;letter-spacing:.04em;text-transform:uppercase;font-size:.95em}
+  .portada .btn-row{margin-top:26px}
+
+  .btn-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--titulo);font-weight:800;font-size:.9rem;text-transform:uppercase;letter-spacing:.05em;text-decoration:none;padding:14px 22px;border-radius:99px;border:3px solid var(--tinta);background:var(--rojo);color:#fff;transition:transform .15s,box-shadow .15s}
+  .btn:hover,.btn:focus-visible{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--tinta);outline:none}
+  .btn.claro{background:var(--crema);color:var(--tinta)}
+
+  /* Secciones */
+  section{position:relative}
+  .wrap{max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,110px) var(--gutter)}
+  h2{font-family:var(--titulo);font-weight:800;text-transform:uppercase;font-size:clamp(1.7rem,4.6vw,3.4rem);line-height:1.05;margin:0 0 clamp(24px,4vw,48px);text-align:center;text-wrap:balance;letter-spacing:-.005em}
+  h2 .estrella{display:inline-block;width:.8em;height:.8em;vertical-align:-.05em;margin-right:.3em}
+  .alt{background:var(--crema-2)}
+
+  /* Sobre mí */
+  .sobre{display:grid;grid-template-columns:minmax(180px,300px) 1fr;gap:clamp(24px,5vw,64px);align-items:center;max-width:980px;margin:0 auto}
+  .retrato{position:relative;justify-self:center;width:100%;max-width:300px}
+  .retrato img{width:100%;aspect-ratio:3/4;object-fit:contain;object-position:center top;background:#fff;border:7px solid var(--rojo);border-radius:8px;box-shadow:10px 10px 0 var(--tinta)}
+  .sobre p{margin:0 0 1em;font-weight:600;font-size:1.05em}
+  .sobre p:last-child{margin-bottom:0}
+  .sobre strong{color:var(--rojo)}
+
+  /* Marcos y galerías */
+  .marco{margin:0;background:var(--crema);border:7px solid var(--marco);border-radius:6px;overflow:hidden;display:block;width:100%;padding:0;cursor:zoom-in;font:inherit;text-align:left}
+  .marco img{width:100%;height:100%;object-fit:contain;transition:transform .35s}
+  .marco:hover img,.marco:focus-visible img{transform:scale(1.03)}
+  .marco:focus-visible{outline:4px solid var(--dorado);outline-offset:3px}
+  .oscuro{background:#5f5f5f}
+  .blanco{background:#fff}
+  figure{margin:0}
+  figcaption{font-family:var(--titulo);font-weight:800;text-align:center;font-size:clamp(1rem,1.6vw,1.35rem);margin-top:14px;line-height:1.2}
+  figcaption small{display:block;font-family:var(--texto);font-weight:600;font-size:.8em;opacity:.75;margin-top:2px}
+
+  .grid{display:grid;gap:clamp(18px,3vw,36px)}
+  .g3{grid-template-columns:repeat(3,1fr);align-items:end}
+  .g2{grid-template-columns:repeat(2,1fr);align-items:center}
+  .g4{grid-template-columns:repeat(4,1fr)}
+  .centrado{max-width:1000px;margin:0 auto}
+  .ancho{max-width:1100px;margin:clamp(18px,3vw,36px) auto 0}
+
+  .retrato-mini .marco{aspect-ratio:2/3;display:flex;align-items:center;justify-content:center;padding:10px}
+  .retrato-mini .marco img{width:auto;height:auto;max-width:100%;max-height:100%}
+
+  .niveles{align-items:start}
+  .niveles .marco{padding:0}
+  .niveles .marco img{height:auto}
+
+  /* Antes/Después */
+  .par{display:grid;grid-template-columns:1fr auto 1fr;gap:clamp(10px,2vw,28px);align-items:center;max-width:1000px;margin:0 auto}
+  .par .marco{aspect-ratio:1/1}
+  .flecha{font-family:var(--titulo);font-weight:800;font-size:clamp(1.6rem,4vw,3rem);color:var(--rojo)}
+  .etiqueta{display:inline-block;background:var(--tinta);color:var(--crema);font-family:var(--titulo);font-weight:600;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;padding:4px 12px;border-radius:99px;margin-top:12px}
+  .par figure{text-align:center}
+  .subtitulo{font-family:var(--titulo);font-weight:800;text-align:center;text-transform:uppercase;background:var(--naranja);color:#fff;width:max-content;max-width:100%;margin:clamp(40px,6vw,72px) auto 24px;padding:.5em 1.4em;border-radius:99px;font-size:clamp(.85rem,1.6vw,1.1rem)}
+  .subtitulo:first-of-type{margin-top:0}
+
+  /* Contacto */
+  .contacto{background:var(--crema) url(img/portada-fondo.webp) center/cover no-repeat;text-align:center;padding:clamp(80px,12vw,150px) var(--gutter)}
+  .contacto h2{font-size:clamp(1.9rem,6vw,4.4rem);margin-bottom:28px}
+  .datos{display:grid;gap:14px;justify-content:center;margin:0 auto 28px;max-width:520px}
+  .dato{display:flex;align-items:center;justify-content:center;gap:14px;font-family:var(--titulo);font-weight:600;font-size:clamp(1rem,2.2vw,1.45rem);text-decoration:none;word-break:break-all}
+  .dato svg{flex:none;width:44px;height:44px}
+  .dato:hover span,.dato:focus-visible span{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:4px;text-decoration-color:var(--rojo)}
+  footer{text-align:center;font-size:.9rem;padding:22px var(--gutter);background:var(--tinta);color:var(--crema)}
+  footer b{font-family:var(--titulo)}
+
+  /* Lightbox */
+  dialog{border:0;background:transparent;padding:0;max-width:96vw;max-height:94vh;overflow:visible}
+  dialog::backdrop{background:rgba(0,0,0,.86)}
+  dialog img{max-width:96vw;max-height:84vh;object-fit:contain;background:#fff;border-radius:6px;margin:0 auto}
+  dialog p{color:#fff;text-align:center;font-family:var(--titulo);font-weight:600;margin:12px 0 0}
+  dialog button{position:absolute;top:-14px;right:-6px;width:44px;height:44px;border-radius:50%;border:3px solid var(--tinta);background:var(--crema);font-size:1.4rem;font-weight:800;cursor:pointer;line-height:1}
+
+  /* Aparición */
+  .rev{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+  .rev.ok{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rev{opacity:1;transform:none;transition:none}.marco img{transition:none}}
+
+  /* Responsive */
+  @media (max-width:900px){
+    .g4{grid-template-columns:repeat(2,1fr)}
+    .g3{grid-template-columns:1fr;max-width:420px;margin:0 auto}
+  }
+  @media (max-width:700px){
+    .sobre{grid-template-columns:1fr;text-align:center}
+    .g2{grid-template-columns:1fr}
+    .menu a{padding:8px 10px;font-size:.72rem}
+    .marca{display:none}
+    .nav-in{justify-content:center}
+    .par{grid-template-columns:1fr;max-width:420px}
+    .flecha{transform:rotate(90deg);justify-self:center}
+    .portada,.contacto{background-size:auto 100%;background-position:center}
+    .portada,.contacto{overflow:hidden;min-height:0;padding-bottom:130px}
+    .portada::before,.contacto::before{content:'';position:absolute;left:-10px;bottom:26px;width:88px;height:88px;background:url(img/estrella.webp) center/contain no-repeat;transform:rotate(-14deg);pointer-events:none}
+    .portada::after,.contacto::after{content:'';position:absolute;right:-34px;bottom:14px;width:140px;height:127px;background:url(img/cinta.webp) center/contain no-repeat;transform:rotate(8deg);pointer-events:none;opacity:.9}
+    .portada-in,.contacto>*{position:relative;z-index:1}
+  }
+  @media (max-width:420px){.g4{grid-template-columns:1fr 1fr;gap:12px}}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Secciones">
+  <div class="nav-in">
+    <a class="marca" href="#inicio">SERGIO<span>.</span></a>
+    <div class="menu">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#diseno-digital">Diseño</a>
+      <a href="#personajes">Personajes</a>
+      <a href="#niveles">Niveles 2D</a>
+      <a href="#animacion">Animación</a>
+      <a href="#retoque">Retoque</a>
+      <a href="#posters">Posters</a>
+      <a class="cta" href="#contacto">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<header class="portada" id="inicio">
+  <div class="portada-in">
+    <p class="saludo">Hola, soy Sergio 👋</p>
+    <h1>PORTAFOLIO</h1>
+    <span class="pastilla">2026</span>
+    <p class="rol">Diseñador visual y<br>creador audiovisual</p>
+    <p class="servicios">Diseño gráfico · Animación 2D · Contenido digital</p>
+    <div class="btn-row">
+      <a class="btn" href="#diseno-digital">Ver trabajos</a>
+      <a class="btn claro" href="#contacto">Contáctame</a>
+    </div>
+  </div>
+</header>
+
+<section id="sobre-mi" class="alt">
+  <div class="wrap rev">
+    <h2>Sobre mí</h2>
+    <div class="sobre">
+      <div class="retrato"><img src="img/avatar.webp" alt="Ilustración de Sergio" width="300" height="410" loading="lazy"></div>
+      <div>
+        <p>Soy <strong>Tecnólogo en Desarrollo de Videojuegos y Entornos Interactivos del SENA</strong>, con formación en diseño gráfico y animación 2D, y experiencia como diseñador en <strong>Organización Hércules</strong>, donde realicé fotografía de producto y retoque digital en Photoshop para la página web oficial.</p>
+        <p>Me caracterizo por ser perseverante, responsable y con alta capacidad de aprendizaje. Disfruto transformar ideas en piezas visuales claras y funcionales, y me interesa crecer profesionalmente dentro de equipos creativos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="diseno-digital">
+  <div class="wrap rev">
+    <h2><img class="estrella" src="img/estrella.webp" alt="" width="40" height="40">Diseño digital</h2>
+    <div class="grid g3">
+      <figure>
+        <button class="marco" data-zoom="Diseño 1 · Portada de revista"><img src="img/portada-muy-interesante.webp" alt="Portada de revista «Muy Interesante» con el titular «La era de la estupidez»" width="900" height="1163" loading="lazy"></button>
+        <figcaption>Diseño 1<small>Portada revista</small></figcaption>
+      </figure>
+      <figure>
+        <button class="marco" data-zoom="Diseño 2 · Publicitario"><img src="img/publicitario-el-que-tiene-tienda.webp" alt="Diseño publicitario con el texto «El que tiene tienda que la atienda» y un personaje rosado" width="1000" height="567" loading="lazy"></button>
+        <figcaption>Diseño 2<small>Publicitario</small></figcaption>
+      </figure>
+      <figure>
+        <button class="marco" data-zoom="Diseño 3 · Portada educativa"><img src="img/portada-muy-junior.webp" alt="Portada educativa «Muy Junior» sobre el increíble cuerpo humano" width="900" height="1199" loading="lazy"></button>
+        <figcaption>Diseño 3<small>Portada educativa</small></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="personajes" class="alt">
+  <div class="wrap rev">
+    <h2>Diseño de personajes</h2>
+    <div class="grid g2 centrado">
+      <button class="marco" data-zoom="Hoja de expresiones faciales"><img src="img/personaje-expresiones.webp" alt="Hoja de expresiones faciales de un personaje femenino de cabello morado" width="1000" height="634" loading="lazy"></button>
+      <button class="marco oscuro" data-zoom="Personajes chibi con mascarilla"><img src="img/personajes-chibi.webp" alt="Dos personajes estilo chibi con mascarilla y ropa urbana" width="1000" height="645" loading="lazy"></button>
+    </div>
+    <div class="ancho" style="max-width:700px">
+      <button class="marco blanco" data-zoom="Ciclo de caminata"><img src="img/personaje-caminata.webp" alt="Ciclo de caminata de un personaje esquelético con traje gris" width="1000" height="568" loading="lazy"></button>
+    </div>
+
+    <p class="subtitulo" style="margin-top:56px">Personajes chibi</p>
+    <div class="grid g4 retrato-mini">
+      <button class="marco blanco" data-zoom="Personaje de gafas amarillas y capa azul"><img src="img/chibi-gafas.webp" alt="Personaje chibi de cabello blanco, gafas amarillas y capa azul" width="700" height="1470" loading="lazy"></button>
+      <button class="marco blanco" data-zoom="Personaje de capa verde con circuitos"><img src="img/chibi-capa-verde.webp" alt="Personaje chibi con capa verde de circuitos y un osito de peluche" width="700" height="1308" loading="lazy"></button>
+      <button class="marco blanco" data-zoom="Personaje con capa de dragones"><img src="img/chibi-dragon.webp" alt="Personaje chibi con capa roja bordada con dragones" width="800" height="1253" loading="lazy"></button>
+      <button class="marco blanco" data-zoom="Personaje con capucha tecnológica"><img src="img/chibi-capucha.webp" alt="Personaje chibi con capucha negra y líneas de circuito cian" width="700" height="1445" loading="lazy"></button>
+    </div>
+
+    <p class="subtitulo">Retratos</p>
+    <div class="ancho" style="max-width:900px;margin-top:0">
+      <button class="marco" data-zoom="Retratos del equipo de personajes"><img src="img/retratos-personajes.webp" alt="Cuatro retratos de los personajes dentro de una cabina futurista" width="1600" height="900" loading="lazy"></button>
+    </div>
+
+    <p class="subtitulo">Model sheet</p>
+    <div class="ancho" style="margin-top:0">
+      <button class="marco" data-zoom="Model sheet · personaje empanada"><img src="img/model-sheet-empanada.webp" alt="Model sheet de un personaje con forma de empanada visto desde distintos ángulos" width="1199" height="252" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<section id="niveles">
+  <div class="wrap rev">
+    <h2><img class="estrella" src="img/destellos.webp" alt="" width="40" height="40">Diseño de niveles de videojuegos 2D</h2>
+    <div class="grid g3 niveles">
+      <button class="marco blanco" data-zoom="Nivel de hielo"><img src="img/nivel-hielo.webp" alt="Mapa de un nivel de videojuego en un mundo de hielo con portales y cristales" width="761" height="756" loading="lazy"></button>
+      <button class="marco blanco" data-zoom="Nivel en el cielo"><img src="img/nivel-desierto.webp" alt="Mapa de un nivel de videojuego con camino de piedra sobre un cielo con nubes" width="1000" height="747" loading="lazy"></button>
+      <button class="marco blanco" data-zoom="Nivel de bosque nocturno"><img src="img/nivel-bosque.webp" alt="Mapa de un nivel de bosque nocturno con una luna sonriente" width="759" height="756" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<section id="animacion" class="alt">
+  <div class="wrap rev">
+    <h2>Animación simple</h2>
+    <figure class="centrado">
+      <button class="marco blanco" data-zoom="Animación simple · ciclo de vuelo"><img src="img/animacion-aves.webp" alt="Fotogramas de un ciclo de vuelo de un ave morada" width="1500" height="977" loading="lazy"></button>
+      <figcaption>Ciclo de vuelo<small>Fotogramas</small></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="retoque">
+  <div class="wrap rev">
+    <h2>Retoque de imágenes para ventas</h2>
+
+    <div class="par">
+      <figure>
+        <button class="marco blanco" data-zoom="Retoque de producto · antes"><img src="img/hercules-pernos-1.webp" alt="Perno en U negro con tuercas, imagen para ventas" width="700" height="655" loading="lazy"></button>
+      </figure>
+      <span class="flecha" aria-hidden="true">→</span>
+      <figure>
+        <button class="marco blanco" data-zoom="Retoque de producto · resultado"><img src="img/hercules-pernos-2.webp" alt="Perno en U negro con tuercas, imagen retocada para la página web" width="505" height="575" loading="lazy"></button>
+      </figure>
+    </div>
+
+    <p class="subtitulo">Fotografía y retoque de producto</p>
+
+    <div class="par">
+      <figure>
+        <button class="marco" data-zoom="Fotografía original"><img src="img/buje-antes.webp" alt="Fotografía original de un buje metálico con fondo azulado" width="1200" height="800" loading="lazy"></button>
+        <span class="etiqueta">Antes</span>
+      </figure>
+      <span class="flecha" aria-hidden="true">↔</span>
+      <figure>
+        <button class="marco" data-zoom="Imagen retocada"><img src="img/buje-despues.webp" alt="Buje metálico retocado con fondo limpio" width="645" height="1254" loading="lazy"></button>
+        <span class="etiqueta">Después</span>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="posters" class="alt">
+  <div class="wrap rev">
+    <h2>Publicidades / Posters</h2>
+    <div class="grid g2 centrado">
+      <button class="marco" data-zoom="Publicidad · Organización Hércules"><img src="img/hercules-publicidad.webp" alt="Publicidad de Organización Hércules con 10% de descuento" width="840" height="840" loading="lazy"></button>
+      <button class="marco" data-zoom="Póster · El niño y la gata, cap. 01"><img src="img/poster-nino-y-gata.webp" alt="Póster «El niño y la gata», capítulo 01, el cuento" width="1300" height="1060" loading="lazy"></button>
+    </div>
+    <p class="subtitulo">El niño y la gata · paletas de color</p>
+    <div class="ancho" style="max-width:760px;margin-top:0">
+      <button class="marco oscuro" data-zoom="El niño y la gata · exploración de paletas"><img src="img/poster-nino-y-gata-paletas.webp" alt="Cinco variantes de color del póster «El niño y la gata»" width="1000" height="1015" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contacto">
+  <h2>Gracias por su atención</h2>
+  <div class="datos">
+    <a class="dato" href="https://wa.me/573178781652" target="_blank" rel="noopener">
+      <svg viewBox="0 0 48 48" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 5a19 19 0 0 0-16.3 28.7L5 43l9.6-2.5A19 19 0 1 0 24 5Z"/><path d="M17 14c-1.2 0-2.6 1.6-2.6 3.8 0 4.7 6.6 11.7 12 12.9 2.6.6 5-1 5-3l-4-2.2-2 1.6c-2.5-.9-5-3.4-5.7-5.8l1.6-2-2.2-4.3Z" fill="#000" stroke="none"/></svg>
+      <span>317 878 1652</span>
+    </a>
+    <a class="dato" href="mailto:roserodiaz@gmail.com">
+      <svg viewBox="0 0 48 48" fill="none" stroke="#000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="9" width="40" height="30" rx="5"/><path d="m6 13 18 14 18-14"/></svg>
+      <span>roserodiaz@gmail.com</span>
+    </a>
+  </div>
+  <span class="pastilla" style="margin:0">PORTAFOLIO · 2026</span>
+</section>
+
+<footer>© 2026 <b>Sergio Rosero Díaz</b> · Todos los derechos reservados</footer>
+
+<dialog id="visor" aria-label="Vista ampliada">
+  <button type="button" id="cerrar" aria-label="Cerrar">×</button>
+  <img id="visor-img" alt="">
+  <p id="visor-txt"></p>
+</dialog>
+
+<script>
+(function(){
+  var d=document.getElementById('visor'),img=document.getElementById('visor-img'),txt=document.getElementById('visor-txt');
+  document.querySelectorAll('[data-zoom]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var i=b.querySelector('img');
+      img.src=i.currentSrc||i.src; img.alt=i.alt; txt.textContent=b.getAttribute('data-zoom');
+      if(d.showModal){d.showModal()}else{d.setAttribute('open','')}
+    });
+  });
+  document.getElementById('cerrar').addEventListener('click',function(){d.close()});
+  d.addEventListener('click',function(e){if(e.target===d)d.close()});
+
+  var els=document.querySelectorAll('.rev');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('ok');io.unobserve(e.target)}})},{threshold:.08});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('ok')})}
+})();
+</script>
+</body>
+</html>
